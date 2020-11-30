@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Alucar Logo.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="26.080357"
+       y="205.24107"
+       width="133.80357"
+       height="37.797619"
+       id="rect71" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="-36.267465"
+     inkscape:cy="776.16534"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="728"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g78"
+       transform="translate(0,22.461009)"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="rect10"
+         style="fill:#ff0000;stroke-width:0.133304"
+         d="m 92.38188,86.080061 v 26.997749 l 9.15901,-0.9675 -4.198654,-26.030249 z m 8.84292,0 4.13336,25.626949 6.61142,-0.69831 -4.20422,-24.928639 z m 10.22884,0 4.13974,24.545779 19.88388,-2.10053 v -7.49997 c 0,-8.279723 -6.92647,-14.945279 -15.52997,-14.945279 z M 88.111303,86.195248 C 80.430701,87.109229 74.52274,93.378599 74.52274,101.02534 v 13.93922 l 13.588563,-1.43543 z m 47.365957,26.840422 -19.13651,2.02161 1.60329,9.50701 h 17.53322 z m -22.76031,2.40446 -6.64353,0.70189 1.35859,8.42227 h 6.82374 z m -10.4608,1.10519 -9.874271,1.04311 v 6.97586 h 11.167571 z m -14.144847,1.49417 -13.588563,1.43542 v 5.08938 h 13.588563 z m -13.511862,11.00859 c 0.711497,6.95616 6.338133,12.48201 13.511862,13.33567 v -13.33567 z m 17.782438,0 v 13.45086 h 14.060441 l -2.16965,-13.45086 z m 15.773351,0 2.16939,13.45086 h 6.95591 l -2.26838,-13.45086 z m 10.5452,0 2.26308,13.41868 c 7.61025,-0.46891 13.69548,-6.16618 14.43732,-13.41868 z" />
+      <text
+         xml:space="preserve"
+         id="text69"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;white-space:pre;shape-inside:url(#rect71);fill:#000000;fill-opacity:1;stroke:none;"
+         transform="matrix(2.7928304,0,0,2.344538,-13.512787,-339.29787)"><tspan
+           x="26.080078"
+           y="215.43222"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.2889px;font-family:Cambria;-inkscape-font-specification:Cambria">AluCar</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

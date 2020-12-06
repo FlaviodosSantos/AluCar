@@ -9,18 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cadastrar_veiculo"></activity>
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activity.cadastrar_veiculo"
+            android:parentActivityName=".activity.ListarDisponiveis"></activity>
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Historico" />
-        <activity android:name=".ListarAlugados" />
-        <activity android:name=".ListarDisponiveis" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".activity.Historico" />
+        <activity android:name=".activity.ListarAlugados" />
+        <activity android:name=".activity.ListarDisponiveis"
+            android:parentActivityName=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity"></activity>
     </application>
 
 </manifest>

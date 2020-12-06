@@ -1,14 +1,17 @@
-package com.example.AluCar;
+package com.example.AluCar.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-public class ListarDisponiveis extends AppCompatActivity {
+import com.example.AluCar.R;
+
+public class ListarAlugados extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listar_disponiveis);
+        setContentView(R.layout.activity_lista_alugados);
 
     }
 }

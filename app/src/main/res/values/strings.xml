@@ -6,5 +6,16 @@
     <string name="lista_de_veiculos_disponiveis">Lista de veículos disponíveis</string>
     <string name="lista_de_veiculos_alugados">Lista de veículos alugados</string>
     <string name="todo">TODO</string>
+    <string name="cadastro_de_veiculos">Cadastro de Veículos</string>
+    <string name="marca">Marca :</string>
+    <string name="modelo">Modelo :</string>
+    <string name="cor">Cor :</string>
+    <string name="ano">Ano :</string>
+    <string name="placa">Placa :</string>
+    <string name="salvar">Salvar</string>
+    <string name="voltar">Voltar</string>
+    <string name="cadastrar_veic">Cadastrar</string>
+    <string name="pesquisar_veic">Pesquisar</string>
+
 
 </resources>

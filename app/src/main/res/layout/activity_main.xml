@@ -17,13 +17,13 @@
         android:layout_marginRight="16dp"
         android:onClick="ListarDisponiveis"
         android:text="@string/veiculos_disponiveis"
-        app:layout_constraintBottom_toTopOf="@+id/bt_alugados"
+        app:layout_constraintBottom_toTopOf="@+id/bt_clientes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bt_alugados"
+        android:id="@+id/bt_clientes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,8 +31,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:onClick="ListarAlugados"
-        android:text="@string/veiculos_alugados"
+        android:onClick="ListarClientes"
+        android:text="@string/clientes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_disponiveis" />
@@ -47,8 +47,8 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:onClick="Historico"
-        android:text="@string/historico"
+        android:text="@string/locacoes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt_alugados" />
+        app:layout_constraintTop_toBottomOf="@+id/bt_clientes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">AluCar</string>
     <string name="veiculos_disponiveis">Veículos Disponíveis</string>
-    <string name="veiculos_alugados">Veículos Alugados</string>
-    <string name="historico">Histórico de aluguéis</string>
+    <string name="clientes">Clientes</string>
+    <string name="locacoes">Locações</string>
     <string name="lista_de_veiculos_disponiveis">Lista de veículos disponíveis</string>
-    <string name="lista_de_veiculos_alugados">Lista de veículos alugados</string>
+    <string name="lista_de_clientes">Lista de clientes</string>
     <string name="todo">TODO</string>
     <string name="cadastro_de_veiculos">Cadastro de Veículos</string>
     <string name="marca">Marca :</string>

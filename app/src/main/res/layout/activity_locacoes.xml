@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.AluCar.activity.Historico">
+    tools:context="com.example.AluCar.activity.Locacoes">
 
     <TextView
         android:id="@+id/textView3"
@@ -15,13 +15,13 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="@string/historico"
+        android:text="@string/locacoes"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Histórico de aluguéis" />
+        tools:text="@string/locacoes" />
 
     <ListView
         android:layout_width="0dp"

@@ -22,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void ListarAlugados(android.view.View view){
+    public void ListarClientes(android.view.View view){
         Intent it = new Intent(this,
-                ListarAlugados.class);
+                ListarClientes.class);
         startActivity(it);
     }
 
     public void Historico(View view){
-        Intent it = new Intent(this, Historico.class);
+        Intent it = new Intent(this, Locacoes.class);
         startActivity(it);
     }
 

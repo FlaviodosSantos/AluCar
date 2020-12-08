@@ -2,6 +2,7 @@ package com.example.AluCar.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ public class cadastrar_veiculo extends AppCompatActivity {
 
     private EditText marca, modelo, cor, ano, placa;
     private VeiculoDAO dao;
+    private Veiculo veiculo = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +29,40 @@ public class cadastrar_veiculo extends AppCompatActivity {
         ano = findViewById(R.id.editAno);
         placa = findViewById(R.id.editPlaca);
         dao = new VeiculoDAO(this);
+
+        Intent it = getIntent();
+        if(it.hasExtra("veiculo")){
+            veiculo = (Veiculo) it.getSerializableExtra("veiculo");
+            marca.setText(veiculo.getMarca());
+            modelo.setText(veiculo.getModelo());
+            cor.setText(veiculo.getCor());
+            ano.setText(veiculo.getAno());
+            placa.setText(veiculo.getPlaca());
+        }
     }
 
     public void salvarVeic(View view){
-        Veiculo veic = new Veiculo();
-        veic.setMarca(marca.getText().toString());
-        veic.setModelo(modelo.getText().toString());
-        veic.setCor(cor.getText().toString());
-        veic.setAno(ano.getText().toString());
-        veic.setPlaca(placa.getText().toString());
-        veic.setStatus("disponivel");
-        long id = dao.inserirVeiculo(veic);
-        Toast.makeText(this, "Veiculo inserido com id : "+ id, Toast.LENGTH_SHORT).show();
+
+        if(veiculo == null){
+            Veiculo veiculo = new Veiculo();
+            veiculo.setMarca(marca.getText().toString());
+            veiculo.setModelo(modelo.getText().toString());
+            veiculo.setCor(cor.getText().toString());
+            veiculo.setAno(ano.getText().toString());
+            veiculo.setPlaca(placa.getText().toString());
+            veiculo.setStatus("disponivel");
+            long id = dao.inserirVeiculo(veiculo);
+            Toast.makeText(this, "Veiculo inserido com id : "+ id, Toast.LENGTH_SHORT).show();
+        }else {
+            veiculo.setMarca(marca.getText().toString());
+            veiculo.setModelo(modelo.getText().toString());
+            veiculo.setCor(cor.getText().toString());
+            veiculo.setAno(ano.getText().toString());
+            veiculo.setPlaca(placa.getText().toString());
+            dao.atualizarVeiculo(veiculo);
+            Toast.makeText(this, "Veiculo Atualizado ", Toast.LENGTH_SHORT).show();
+        }
+
         finish();
     }
 }

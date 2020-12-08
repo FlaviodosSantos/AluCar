@@ -52,5 +52,20 @@ public class VeiculoDAO {
         return veiculos;
     }
 
+    public void excluirVeiculo(Veiculo v){
+        banco.delete("veiculo", "id = ?", new String[]{v.getId().toString()});
+    }
+
+    public void atualizarVeiculo(Veiculo veiculo){
+        ContentValues values = new ContentValues();
+        values.put("marca", veiculo.getMarca());
+        values.put("modelo", veiculo.getModelo());
+        values.put("cor", veiculo.getCor());
+        values.put("ano", veiculo.getAno());
+        values.put("placa", veiculo.getPlaca());
+        //values.put("status", veiculo.getStatus());
+        banco.update("veiculo", values, "id = ?",
+                new String[]{veiculo.getId().toString()});
+    }
 
 }

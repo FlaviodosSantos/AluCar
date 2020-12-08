@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.AluCar.R;
 
-public class Historico extends AppCompatActivity {
+public class Cadastrar_cliente extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historico);
+        setContentView(R.layout.activity_cadastrar_cliente);
     }
 }

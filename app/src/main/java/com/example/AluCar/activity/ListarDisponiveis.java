@@ -2,7 +2,6 @@ package com.example.AluCar.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,7 +12,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 
@@ -89,7 +87,7 @@ public class ListarDisponiveis extends AppCompatActivity {
 
     public void cadastrarVeiculo(MenuItem item){
         Intent it = new Intent(this,
-                cadastrar_veiculo.class);
+                Cadastrar_veiculo.class);
         startActivity(it);
     }
 
@@ -117,7 +115,7 @@ public class ListarDisponiveis extends AppCompatActivity {
         AdapterView.AdapterContextMenuInfo menuInfo =
                 (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         final Veiculo veiculoAtualizar = veiculosFiltrados.get(menuInfo.position);
-        Intent it = new Intent(this, cadastrar_veiculo.class);
+        Intent it = new Intent(this, Cadastrar_veiculo.class);
         it.putExtra("veiculo", veiculoAtualizar);
         startActivity(it);
     }

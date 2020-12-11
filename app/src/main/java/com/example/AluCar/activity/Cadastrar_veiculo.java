@@ -12,7 +12,7 @@ import com.example.AluCar.BDhelper.VeiculoDAO;
 import com.example.AluCar.R;
 import com.example.AluCar.model.Veiculo;
 
-public class cadastrar_veiculo extends AppCompatActivity {
+public class Cadastrar_veiculo extends AppCompatActivity {
 
     private EditText marca, modelo, cor, ano, placa;
     private VeiculoDAO dao;

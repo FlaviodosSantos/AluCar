@@ -20,6 +20,9 @@ public class Conexao extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE veiculo(id integer PRIMARY KEY AUTOINCREMENT," +
                 "marca varchar(25), modelo varchar(25), cor varchar(25), ano varchar(4)," +
                 "placa varchar(7), status varchar(10))");
+
+        db.execSQL("CREATE TABLE cliente(id integer PRIMARY KEY AUTOINCREMENT," +
+                "nome varchar(50), cpf varchar(15), telefone varchar(15))");
     }
 
     @Override

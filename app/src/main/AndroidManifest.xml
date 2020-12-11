@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Cadastrar_cliente"></activity>
-        <activity
-            android:name=".activity.cadastrar_veiculo"
-            android:parentActivityName=".activity.ListarDisponiveis" />
-        <activity android:name=".activity.SplashActivity">
+
+        <!-- Tela Splash -->
+        <activity android:name=".activity.SplashActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.MainActivity" />
         <activity
             android:name=".activity.Locacoes"
             android:parentActivityName=".activity.MainActivity" />
@@ -29,7 +29,15 @@
         <activity
             android:name=".activity.ListarDisponiveis"
             android:parentActivityName=".activity.MainActivity" />
-        <activity android:name=".activity.MainActivity" />
+
+        <activity
+            android:name=".activity.Cadastrar_cliente"
+            android:parentActivityName=".activity.ListarClientes" />  <!-- botão voltar automático com finish -->
+
+        <activity
+            android:name=".activity.Cadastrar_veiculo"
+            android:parentActivityName=".activity.ListarDisponiveis" /> <!-- botão voltar automático com finish -->
+
     </application>
 
 </manifest>

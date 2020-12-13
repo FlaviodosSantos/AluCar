@@ -29,4 +29,10 @@
     <string name="atualizar_veiculo">Atualizar</string>
     <string name="excluir_veiculo">Excluir</string>
 
+    <string name="devolucao">Devolvoluçao</string>
+    <string name="editar_locacao">Editar</string>
+    <string name="excluir_locacao">Excluir</string>
+    <string name="cadastrar_aluguel">Cadastrar</string>
+    <string name="pesquisar_aluguel">Pesquisar</string>
+
 </resources>

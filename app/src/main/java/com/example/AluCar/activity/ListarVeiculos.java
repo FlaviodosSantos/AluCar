@@ -23,7 +23,7 @@ import com.example.AluCar.model.Veiculo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListarDisponiveis extends AppCompatActivity {
+public class ListarVeiculos extends AppCompatActivity {
 
     private ListView listView;
     private VeiculoDAO dao;
@@ -33,7 +33,7 @@ public class ListarDisponiveis extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listar_disponiveis);
+        setContentView(R.layout.activity_listar_veiculos);
 
         listView = findViewById(R.id.lista_veiculos_diponiveis);
         dao = new VeiculoDAO(this);

@@ -12,7 +12,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 
@@ -20,7 +19,7 @@ import com.example.AluCar.BDhelper.ClienteDAO;
 import com.example.AluCar.R;
 import com.example.AluCar.adapter.ClienteAdapter;
 import com.example.AluCar.model.Clientes;
-import com.example.AluCar.model.Veiculo;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +34,7 @@ public class ListarClientes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lista_clientes);
+        setContentView(R.layout.activity_listar_clientes);
 
         listView = findViewById(R.id.lista_cliente);
         clienteDAO = new ClienteDAO(this);

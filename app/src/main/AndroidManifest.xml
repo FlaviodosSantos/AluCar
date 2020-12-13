@@ -9,35 +9,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".activity.Cadastrar_locacao"></activity>
         <!-- Tela Splash -->
-        <activity android:name=".activity.SplashActivity" android:screenOrientation="portrait">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".activity.MainActivity" />
         <activity
-            android:name=".activity.MainActivity" />
-        <activity
-            android:name=".activity.Locacoes"
+            android:name=".activity.ListarLocacoes"
             android:parentActivityName=".activity.MainActivity" />
         <activity
             android:name=".activity.ListarClientes"
             android:parentActivityName=".activity.MainActivity" />
         <activity
-            android:name=".activity.ListarDisponiveis"
+            android:name=".activity.ListarVeiculos"
             android:parentActivityName=".activity.MainActivity" />
-
         <activity
             android:name=".activity.Cadastrar_cliente"
-            android:parentActivityName=".activity.ListarClientes" />  <!-- botão voltar automático com finish -->
-
+            android:parentActivityName=".activity.ListarClientes" /> <!-- botão voltar automático com finish -->
         <activity
             android:name=".activity.Cadastrar_veiculo"
-            android:parentActivityName=".activity.ListarDisponiveis" /> <!-- botão voltar automático com finish -->
-
+            android:parentActivityName=".activity.ListarVeiculos" />
     </application>
 
 </manifest>

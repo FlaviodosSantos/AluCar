@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.AluCar.activity.Locacoes">
+    tools:context="com.example.AluCar.activity.ListarLocacoes">
 
     <TextView
         android:id="@+id/textView3"
@@ -24,6 +24,7 @@
         tools:text="@string/locacoes" />
 
     <ListView
+        android:id="@+id/lista_locacoes"
         android:layout_width="0dp"
         android:layout_height="569dp"
         android:layout_marginStart="1dp"
@@ -31,6 +32,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />

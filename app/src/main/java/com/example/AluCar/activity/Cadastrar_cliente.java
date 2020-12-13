@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.example.AluCar.BDhelper.ClienteDAO;
 import com.example.AluCar.R;
 import com.example.AluCar.model.Clientes;
-import com.example.AluCar.model.Veiculo;
+
 
 public class Cadastrar_cliente extends AppCompatActivity {
 

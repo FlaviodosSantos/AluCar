@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void ListarDisponiveis(android.view.View view){
         Intent it = new Intent(this,
-                ListarDisponiveis.class);
+                ListarVeiculos.class);
         startActivity(it);
     }
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Historico(View view){
-        Intent it = new Intent(this, Locacoes.class);
+        Intent it = new Intent(this, ListarLocacoes.class);
         startActivity(it);
     }
 

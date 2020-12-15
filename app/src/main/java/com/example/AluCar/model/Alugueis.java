@@ -3,14 +3,12 @@ package com.example.AluCar.model;
 import java.io.Serializable;
 
 public class Alugueis implements Serializable {
+
     private Integer id;
-    private Veiculo veiculo;
-    private Clientes cliente;
+    private String marcaA, modeloA, corA, anoA, placaA;
+    private String nomeA, cpfA, telefoneA;
     private String data_aluguel, data_devolucao, qtd_dias, valor_aluguel;
 
-
-    public Alugueis() {
-    }
 
     public Integer getId() {
         return id;
@@ -20,20 +18,68 @@ public class Alugueis implements Serializable {
         this.id = id;
     }
 
-    public Veiculo getVeiculo() {
-        return veiculo;
+    public String getMarcaA() {
+        return marcaA;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
+    public void setMarcaA(String marcaA) {
+        this.marcaA = marcaA;
     }
 
-    public Clientes getCliente() {
-        return cliente;
+    public String getModeloA() {
+        return modeloA;
     }
 
-    public void setCliente(Clientes cliente) {
-        this.cliente = cliente;
+    public void setModeloA(String modeloA) {
+        this.modeloA = modeloA;
+    }
+
+    public String getCorA() {
+        return corA;
+    }
+
+    public void setCorA(String corA) {
+        this.corA = corA;
+    }
+
+    public String getAnoA() {
+        return anoA;
+    }
+
+    public void setAnoA(String anoA) {
+        this.anoA = anoA;
+    }
+
+    public String getPlacaA() {
+        return placaA;
+    }
+
+    public void setPlacaA(String placaA) {
+        this.placaA = placaA;
+    }
+
+    public String getNomeA() {
+        return nomeA;
+    }
+
+    public void setNomeA(String nomeA) {
+        this.nomeA = nomeA;
+    }
+
+    public String getCpfA() {
+        return cpfA;
+    }
+
+    public void setCpfA(String cpfA) {
+        this.cpfA = cpfA;
+    }
+
+    public String getTelefoneA() {
+        return telefoneA;
+    }
+
+    public void setTelefoneA(String telefoneA) {
+        this.telefoneA = telefoneA;
     }
 
     public String getData_aluguel() {

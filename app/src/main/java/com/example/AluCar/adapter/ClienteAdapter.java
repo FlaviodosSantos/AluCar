@@ -41,9 +41,9 @@ public class ClienteAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup viewGroup) {
 
         View view = activity.getLayoutInflater().inflate(R.layout.item_cliente, viewGroup, false);
-        TextView nome = view.findViewById(R.id.txt_nome);
-        TextView cpf = view.findViewById(R.id.txt_cpf);
-        TextView telefone = view.findViewById(R.id.txt_telefone);
+        TextView nome = view.findViewById(R.id.txt_nomeA);
+        TextView cpf = view.findViewById(R.id.txt_cpfA);
+        TextView telefone = view.findViewById(R.id.txt_telefoneA);
 
         Clientes c = clientes.get(position);
 

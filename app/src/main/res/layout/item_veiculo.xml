@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/txt_marca"
+        android:id="@+id/txt_marcaA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_modelo"
+        android:id="@+id/txt_modeloA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
         android:text="TextView"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/txt_marca"
+        app:layout_constraintStart_toEndOf="@+id/txt_marcaA"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -42,10 +42,10 @@
         android:text="@string/cor"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_marca" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_marcaA" />
 
     <TextView
-        android:id="@+id/txt_cor"
+        android:id="@+id/txt_corA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -53,7 +53,7 @@
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/txt_marca" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_marcaA" />
 
     <TextView
         android:id="@+id/textView11"
@@ -64,11 +64,11 @@
         android:layout_marginTop="8dp"
         android:text="@string/ano"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/txt_cor"
-        app:layout_constraintTop_toBottomOf="@+id/txt_modelo" />
+        app:layout_constraintStart_toEndOf="@+id/txt_corA"
+        app:layout_constraintTop_toBottomOf="@+id/txt_modeloA" />
 
     <TextView
-        android:id="@+id/txt_ano"
+        android:id="@+id/txt_anoA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -76,7 +76,7 @@
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/txt_modelo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_modeloA" />
 
     <TextView
         android:id="@+id/textView14"
@@ -87,11 +87,11 @@
         android:layout_marginTop="8dp"
         android:text="@string/placa"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/txt_ano"
-        app:layout_constraintTop_toBottomOf="@+id/txt_modelo" />
+        app:layout_constraintStart_toEndOf="@+id/txt_anoA"
+        app:layout_constraintTop_toBottomOf="@+id/txt_modeloA" />
 
     <TextView
-        android:id="@+id/txt_placa"
+        android:id="@+id/txt_placaA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -99,5 +99,5 @@
         android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/txt_modelo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_modeloA" />
 </androidx.constraintlayout.widget.ConstraintLayout>

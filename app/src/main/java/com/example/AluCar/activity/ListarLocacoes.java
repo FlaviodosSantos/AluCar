@@ -7,10 +7,19 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import com.example.AluCar.R;
+import com.example.AluCar.model.Alugueis;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListarLocacoes extends AppCompatActivity {
+
+    private ListView listView;
+    private List<Alugueis> alugueis;
+    private List<Alugueis> alugueisFiltrados = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

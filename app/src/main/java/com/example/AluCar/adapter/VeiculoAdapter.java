@@ -40,11 +40,11 @@ public class VeiculoAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup viewGroup) {
 
         View view = activity.getLayoutInflater().inflate(R.layout.item_veiculo, viewGroup, false);
-        TextView marca = view.findViewById(R.id.txt_marca);
-        TextView modelo = view.findViewById(R.id.txt_modelo);
-        TextView cor = view.findViewById(R.id.txt_cor);
-        TextView ano = view.findViewById(R.id.txt_ano);
-        TextView placa = view.findViewById(R.id.txt_placa);
+        TextView marca = view.findViewById(R.id.txt_marcaA);
+        TextView modelo = view.findViewById(R.id.txt_modeloA);
+        TextView cor = view.findViewById(R.id.txt_corA);
+        TextView ano = view.findViewById(R.id.txt_anoA);
+        TextView placa = view.findViewById(R.id.txt_placaA);
 
         Veiculo v = veiculos.get(position);
 

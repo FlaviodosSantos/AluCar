@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.Cadastrar_locacao"></activity>
+        <activity
+            android:name=".activity.Cadastrar_locacao"
+            android:parentActivityName=".activity.ListarClientes" >
+        </activity>
         <!-- Tela Splash -->
         <activity
             android:name=".activity.SplashActivity"

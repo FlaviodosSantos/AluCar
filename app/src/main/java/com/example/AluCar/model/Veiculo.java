@@ -6,7 +6,7 @@ public class Veiculo implements Serializable {
 
     private Integer id;
     private String marca, modelo, cor, ano, placa, status; //status => disponível ou alugado
-    //private Boolean
+
 
     public Integer getId() {
         return id;

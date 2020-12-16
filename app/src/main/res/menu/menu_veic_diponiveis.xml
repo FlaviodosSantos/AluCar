@@ -8,7 +8,7 @@
         app:showAsAction="ifRoom"
         android:onClick="cadastrarVeiculo"/>
     <item
-        android:id="@+id/app_bar_search"
+        android:id="@+id/search_locacoes"
         android:icon="@drawable/ic_search_black_24dp"
         android:title="@string/pesquisar_veic"
         app:actionViewClass="android.widget.SearchView"

@@ -113,4 +113,10 @@ public class Alugueis implements Serializable {
     public void setValor_aluguel(String valor_aluguel) {
         this.valor_aluguel = valor_aluguel;
     }
+
+    @Override
+    public String toString(){
+        return marcaA;
+    }
+
 }

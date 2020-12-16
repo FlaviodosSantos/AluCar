@@ -52,7 +52,7 @@ public class ListarVeiculos extends AppCompatActivity {
         MenuInflater i = getMenuInflater();
         i.inflate(R.menu.menu_veic_diponiveis, menu);
 
-        SearchView sv = (SearchView) menu.findItem(R.id.app_bar_search).getActionView();
+        SearchView sv = (SearchView) menu.findItem(R.id.search_locacoes).getActionView();
         sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

@@ -48,6 +48,8 @@ public class ListarClientes extends AppCompatActivity {
 
         registerForContextMenu(listView);
 
+
+
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -143,6 +145,18 @@ public class ListarClientes extends AppCompatActivity {
         it.putExtra("clienteAtu", clienteAtualizar );
         startActivity(it);
     }
+
+    public void enviarCliente(MenuItem item){
+        AdapterView.AdapterContextMenuInfo menuInfo =
+                (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        final Clientes clienteEnviar = clientesFiltrados.get(menuInfo.position);
+        Intent it = new Intent(this, Cadastrar_locacao.class);
+        it.putExtra("clienteEnv", clienteEnviar);
+        startActivity(it);
+        finish();
+    }
+
+
 
     @Override
     public void onResume(){

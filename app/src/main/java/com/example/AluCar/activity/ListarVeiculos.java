@@ -120,6 +120,16 @@ public class ListarVeiculos extends AppCompatActivity {
         startActivity(it);
     }
 
+    public void enviarVeiculo(MenuItem item){
+        AdapterView.AdapterContextMenuInfo menuInfo =
+                (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        final Veiculo veiculoEnviar = veiculosFiltrados.get(menuInfo.position);
+        Intent it = new Intent(this, Cadastrar_locacao.class);
+        it.putExtra("veiculoEnv", veiculoEnviar);
+        startActivity(it);
+        finish();
+    }
+
     @Override
     public void onResume(){
         super.onResume();

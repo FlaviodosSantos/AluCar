@@ -10,4 +10,8 @@
         android:id="@+id/excluir_cliente"
         android:title="@string/excluir_cliente"
         android:onClick="excluirCliente"/>
+    <item
+        android:id="@+id/enviar_cliente"
+        android:onClick="enviarCliente"
+        android:title="@string/enviar_cliente" />
 </menu>

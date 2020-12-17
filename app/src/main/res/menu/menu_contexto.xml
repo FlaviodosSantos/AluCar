@@ -4,4 +4,8 @@
 
     <item android:title="@string/atualizar_veiculo" android:onClick="atualizarVeiculo"/>
     <item android:title="@string/excluir_veiculo" android:onClick="excluirVeiculo"/>
+    <item
+        android:id="@+id/enviar_veiculo"
+        android:onClick="enviarVeiculo"
+        android:title="@string/enviar_veiculo" />
 </menu>

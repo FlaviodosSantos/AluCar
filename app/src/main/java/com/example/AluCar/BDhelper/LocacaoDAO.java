@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.AluCar.model.Alugueis;
+import com.example.AluCar.model.Veiculo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +15,7 @@ public class LocacaoDAO {
 
     private Conexao conexao;
     private SQLiteDatabase banco;
+    private Veiculo veiculo;
 
     public LocacaoDAO(Context context){
         conexao = new Conexao(context);
@@ -23,6 +25,7 @@ public class LocacaoDAO {
     public long inserirLocacao(Alugueis alugueis){
         ContentValues val = new ContentValues();
 
+        val.put("idVeic", alugueis.getIdVeic());
         val.put("marcaA", alugueis.getMarcaA());
         val.put("modeloA", alugueis.getModeloA());
         val.put("corA", alugueis.getCorA());
@@ -38,12 +41,18 @@ public class LocacaoDAO {
         val.put("qtd_dias", alugueis.getQtd_dias());
         val.put("valor_aluguel", alugueis.getValor_aluguel());
 
+        //int id = alugueis.getIdVeic();
+        ContentValues values = new ContentValues();
+        values.put("status", "alugado");
+        banco.update("veiculo", values, "id = ?",
+                new String[]{alugueis.getIdVeic().toString()});
+
         return banco.insert("locacao", null, val);
     }
 
     public List<Alugueis> listarLocacoes(){
         List<Alugueis> alugueis = new ArrayList<>();
-        String[] colunas = {"id", "marcaA","modeloA","corA","anoA","placaA", "nomeA", "cpfA",
+        String[] colunas = {"id", "idVeic","marcaA","modeloA","corA","anoA","placaA", "nomeA", "cpfA",
                 "telefoneA", "data_aluguel", "data_devolucao", "qtd_dias", "valor_aluguel"};
         Cursor cursor = banco.query("locacao", colunas, null, null,
                 null,null, null);
@@ -51,18 +60,19 @@ public class LocacaoDAO {
             Alugueis a = new Alugueis();
 
             a.setId(cursor.getInt(0));
-            a.setMarcaA(cursor.getString(1));
-            a.setModeloA(cursor.getString(2));
-            a.setCorA(cursor.getString(3));
-            a.setAnoA(cursor.getString(4));
-            a.setPlacaA(cursor.getString(5));
-            a.setNomeA(cursor.getString(6));
-            a.setCpfA(cursor.getString(7));
-            a.setTelefoneA(cursor.getString(8));
-            a.setData_aluguel(cursor.getString(9));
-            a.setData_devolucao(cursor.getString(10));
-            a.setQtd_dias(cursor.getString(11));
-            a.setValor_aluguel(cursor.getString(12));
+            a.setIdVeic(cursor.getInt(1));
+            a.setMarcaA(cursor.getString(2));
+            a.setModeloA(cursor.getString(3));
+            a.setCorA(cursor.getString(4));
+            a.setAnoA(cursor.getString(5));
+            a.setPlacaA(cursor.getString(6));
+            a.setNomeA(cursor.getString(7));
+            a.setCpfA(cursor.getString(8));
+            a.setTelefoneA(cursor.getString(9));
+            a.setData_aluguel(cursor.getString(10));
+            a.setData_devolucao(cursor.getString(11));
+            a.setQtd_dias(cursor.getString(12));
+            a.setValor_aluguel(cursor.getString(13));
 
             alugueis.add(a);
         }
@@ -70,6 +80,14 @@ public class LocacaoDAO {
     }
 
     public void deletarLocacao(Alugueis a){
+
+        //atualizar mudança de status do veiculo
+        ContentValues values = new ContentValues();
+        values.put("status", "disponivel");
+        banco.update("veiculo", values, "id = ?",
+                new String[]{a.getIdVeic().toString()});
+
+        //deleta locação do banco de dados
         banco.delete("locacao","id = ?", new String[]{a.getId().toString()});
     }
 

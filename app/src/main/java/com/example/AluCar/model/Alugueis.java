@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Alugueis implements Serializable {
 
-    private Integer id;
+    private Integer id, idVeic;
     private String marcaA, modeloA, corA, anoA, placaA;
     private String nomeA, cpfA, telefoneA;
     private String data_aluguel, data_devolucao, qtd_dias, valor_aluguel;
@@ -16,6 +16,14 @@ public class Alugueis implements Serializable {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getIdVeic() {
+        return idVeic;
+    }
+
+    public void setIdVeic(Integer idVeic) {
+        this.idVeic = idVeic;
     }
 
     public String getMarcaA() {

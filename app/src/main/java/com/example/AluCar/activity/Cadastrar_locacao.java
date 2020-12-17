@@ -11,14 +11,19 @@ import android.widget.Toast;
 import com.example.AluCar.BDhelper.LocacaoDAO;
 import com.example.AluCar.R;
 import com.example.AluCar.model.Alugueis;
+import com.example.AluCar.model.Clientes;
+import com.example.AluCar.model.Veiculo;
 
 public class Cadastrar_locacao extends AppCompatActivity {
 
+    private Integer idVeic;
     private EditText marcaA, modeloA, corA, anoA, placaA;
     private EditText nomeA, cpfA, telefoneA;
     private EditText data_aluguel, data_devolucao, qtd_dias, valor_aluguel;
     private LocacaoDAO locaDao;
     private Alugueis aluguel = null;
+    private Veiculo veiculo = null;
+    private Clientes clientes = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +50,8 @@ public class Cadastrar_locacao extends AppCompatActivity {
         Intent it = getIntent();
         if (it.hasExtra("aluguel")){
             aluguel = (Alugueis) it.getSerializableExtra("aluguel");
+
+            idVeic = aluguel.getIdVeic();
             marcaA.setText(aluguel.getMarcaA());
             modeloA.setText(aluguel.getModeloA());
             corA.setText(aluguel.getCorA());
@@ -58,18 +65,39 @@ public class Cadastrar_locacao extends AppCompatActivity {
             qtd_dias.setText(aluguel.getQtd_dias());
             valor_aluguel.setText(aluguel.getValor_aluguel());
         }
+
+        Intent itVeiculo = getIntent();
+        if(itVeiculo.hasExtra("veiculoEnv")){
+            veiculo = (Veiculo) it.getSerializableExtra("veiculoEnv");
+            idVeic = veiculo.getId(); //variavel pra salar o id do veiculo
+            marcaA.setText(veiculo.getMarca());
+            modeloA.setText(veiculo.getModelo());
+            corA.setText(veiculo.getCor());
+            anoA.setText(veiculo.getAno());
+            placaA.setText(veiculo.getPlaca());
+
+        }
+
+        Intent itCliente = getIntent();
+        if(itCliente.hasExtra("clienteEnv")){
+            clientes = (Clientes) itCliente.getSerializableExtra("clienteEnv");
+            nomeA.setText(clientes.getNome());
+            cpfA.setText(clientes.getCpf());
+            telefoneA.setText(clientes.getTelefone());
+        }
+
+
     }
 
     public void adicionarVeiculo(android.view.View view){
         Intent i = new Intent(this, ListarVeiculos.class);
         startActivity(i);
-
+        finish();
     }
 
     public void adicionarCliente(android.view.View view){
         Intent i = new Intent(this, ListarClientes.class);
         startActivity(i);
-
     }
 
     public void salvarLocacao(View view){
@@ -77,6 +105,7 @@ public class Cadastrar_locacao extends AppCompatActivity {
         if(aluguel == null) {
             Alugueis alugueis = new Alugueis();
             //veiculo
+            alugueis.setIdVeic(idVeic);
             alugueis.setMarcaA(marcaA.getText().toString());
             alugueis.setModeloA(modeloA.getText().toString());
             alugueis.setCorA(corA.getText().toString());
@@ -94,9 +123,12 @@ public class Cadastrar_locacao extends AppCompatActivity {
 
             long id = locaDao.inserirLocacao(alugueis);
             Toast.makeText(this, "Locação inserida com id : " + id, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Veiculo com id : " + idVeic, Toast.LENGTH_LONG).show();
+            //finish();
 
         } else {
             //veiculo
+            idVeic = aluguel.getIdVeic();
             aluguel.setMarcaA(marcaA.getText().toString());
             aluguel.setModeloA(modeloA.getText().toString());
             aluguel.setCorA(corA.getText().toString());

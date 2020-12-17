@@ -23,7 +23,7 @@ public class Conexao extends SQLiteOpenHelper {
                 "nome varchar(50), cpf varchar(15), telefone varchar(15))");
 
         db.execSQL("CREATE TABLE locacao(id integer PRIMARY KEY AUTOINCREMENT," +
-                "marcaA varchar(25), modeloA varchar(25), corA varchar(25), " +
+                "idVeic integer, marcaA varchar(25), modeloA varchar(25), corA varchar(25), " +
                 "anoA varchar(25), placaA varchar(25)," +
                 "nomeA varchar(25), cpfA varchar(15), telefoneA varchar(25), " +
                 "data_aluguel varchar(25), data_devolucao varchar(25)," +

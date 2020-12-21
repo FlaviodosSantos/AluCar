@@ -24,6 +24,7 @@ public class Cadastrar_locacao extends AppCompatActivity {
     private Alugueis aluguel = null;
     private Veiculo veiculo = null;
     private Clientes clientes = null;
+    private final static  int CODIGO_IDENTIFICADOR = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,13 +79,13 @@ public class Cadastrar_locacao extends AppCompatActivity {
 
         }
 
-        Intent itCliente = getIntent();
+        /*Intent itCliente = getIntent();
         if(itCliente.hasExtra("clienteEnv")){
             clientes = (Clientes) itCliente.getSerializableExtra("clienteEnv");
             nomeA.setText(clientes.getNome());
             cpfA.setText(clientes.getCpf());
             telefoneA.setText(clientes.getTelefone());
-        }
+        }*/
 
 
     }
@@ -96,9 +97,30 @@ public class Cadastrar_locacao extends AppCompatActivity {
     }
 
     public void adicionarCliente(android.view.View view){
-        Intent i = new Intent(this, ListarClientes.class);
-        startActivity(i);
+        //Intent i = new Intent(this, ListarClientes.class);
+        //startActivity(i);
+
+        Intent intent = new Intent(this, ListarClientes.class);
+        startActivityForResult(intent, CODIGO_IDENTIFICADOR);
     }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == CODIGO_IDENTIFICADOR) {
+            //String message = data.getStringExtra("resultado");
+            //Result.setText("Resultado: "+
+
+            //Intent itCliente = getIntent();
+            //if(itCliente.hasExtra("clienteEnv")){
+                clientes = (Clientes) data.getSerializableExtra("clienteEnv");
+                nomeA.setText(clientes.getNome());
+                cpfA.setText(clientes.getCpf());
+                telefoneA.setText(clientes.getTelefone());
+            //}
+
+        }
+    }
+
 
     public void salvarLocacao(View view){
 

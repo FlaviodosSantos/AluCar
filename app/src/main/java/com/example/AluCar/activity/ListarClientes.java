@@ -150,13 +150,15 @@ public class ListarClientes extends AppCompatActivity {
         AdapterView.AdapterContextMenuInfo menuInfo =
                 (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
         final Clientes clienteEnviar = clientesFiltrados.get(menuInfo.position);
-        Intent it = new Intent(this, Cadastrar_locacao.class);
-        it.putExtra("clienteEnv", clienteEnviar);
-        startActivity(it);
+        //Intent it = new Intent(this, Cadastrar_locacao.class);
+        //it.putExtra("clienteEnv", clienteEnviar);
+        //startActivity(it);
+
+        Intent intent = getIntent();
+        intent.putExtra("clienteEnv", clienteEnviar);
+        setResult(1, intent);
         finish();
     }
-
-
 
     @Override
     public void onResume(){
